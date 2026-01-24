@@ -6,30 +6,31 @@ export default function About() {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I'm an IT professional with hands-on experience managing enterprise infrastructure, 
-              system administration, and network security. Passionate about automation, troubleshooting complex systems, 
-              and implementing best practices for reliability and performance.
+              I'm a Technical Support Specialist I at PointSolve Technology, Inc., with expertise in providing on-site and remote support, 
+              resolving network issues, and optimizing system performance. With a B.S. in Information Technology (ABET Accredited) from Kutztown University, 
+              I bring both academic foundation and hands-on experience to every IT challenge.
             </p>
             <p>
-              I continuously work on certifications and stay updated with industry standards. When I'm not managing systems, 
-              I'm documenting solutions, learning new technologies, and contributing to IT community knowledge bases.
+              I specialize in managing diverse client environments, conducting system reviews to identify improvement opportunities, 
+              and implementing proactive solutions. My passion for IT excellence drives me to continuously learn emerging technologies 
+              and deliver secure, scalable solutions aligned with operational requirements.
             </p>
           </div>
           <div className="skills">
             <h3>Technical Skills</h3>
             <div className="skill-tags">
-              <span>Windows Server</span>
+              <span>Help Desk Support</span>
+              <span>Remote Troubleshooting</span>
+              <span>Windows Systems</span>
+              <span>Linux (Ubuntu, CentOS)</span>
               <span>Active Directory</span>
-              <span>Linux/Ubuntu</span>
-              <span>VMware/Hyper-V</span>
-              <span>AWS/Azure</span>
-              <span>PowerShell</span>
-              <span>Networking</span>
-              <span>Firewalls</span>
-              <span>Backup & Recovery</span>
-              <span>Troubleshooting</span>
-              <span>Security</span>
-              <span>Group Policy</span>
+              <span>Office 365</span>
+              <span>TCP/IP & Networking</span>
+              <span>DNS/DHCP</span>
+              <span>AWS & DigitalOcean</span>
+              <span>SQL & Databases</span>
+              <span>Python Scripting</span>
+              <span>Technical Documentation</span>
             </div>
           </div>
         </div>

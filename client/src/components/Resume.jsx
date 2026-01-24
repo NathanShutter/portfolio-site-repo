@@ -6,60 +6,25 @@ export default function Resume() {
         
         <div className="resume-container">
           <div className="resume-header">
-            <h3>Your Name</h3>
-            <p className="resume-title">IT Professional & Aspiring System Administrator</p>
+            <h3>Nathan Shutter</h3>
+            <p className="resume-title">Technical Support Specialist I</p>
             <div className="resume-contact">
-              <span>📧 your.email@example.com</span>
-              <span>📱 (555) 123-4567</span>
-              <span>📍 Your City, State</span>
+              <span>📧 nateshut1@gmail.com</span>
+              <span>📱 (717) 701-9942</span>
+              <span>📍 Lebanon, PA</span>
+              <span>💼 <a href="https://www.linkedin.com/in/nathan-shutter-abc123" target="_blank" rel="noopener noreferrer" style={{color: '#10B981', textDecoration: 'none'}}>LinkedIn</a></span>
+              <span>💻 <a href="https://github.com/NathanShutter" target="_blank" rel="noopener noreferrer" style={{color: '#10B981', textDecoration: 'none'}}>GitHub</a></span>
             </div>
           </div>
 
           <div className="resume-section">
             <h4>Professional Summary</h4>
             <p>
-              Dedicated IT professional with hands-on experience in system administration, infrastructure management, 
-              and IT support. Seeking to advance career as a System Administrator with focus on enterprise infrastructure, 
-              network security, and automation. Strong problem-solving skills and commitment to continuous learning.
+              Technical Support Specialist I at PointSolve Technology, Inc., with expertise in providing on-site and remote support, 
+              resolving network issues, and optimizing system performance. Proficient in Windows systems, Office 365, and network protocols, 
+              including DNS and DHCP. B.S. in Information Technology (ABET Accredited) with proven ability to manage diverse client environments 
+              and deliver secure, scalable IT solutions.
             </p>
-          </div>
-
-          <div className="resume-section">
-            <h4>Technical Skills</h4>
-            <div className="resume-skills">
-              <div className="skill-group">
-                <strong>Operating Systems:</strong>
-                <span>Windows Server 2016/2019/2022, Windows 10/11, Ubuntu, CentOS</span>
-              </div>
-              <div className="skill-group">
-                <strong>Virtualization:</strong>
-                <span>VMware vSphere, Hyper-V, VirtualBox</span>
-              </div>
-              <div className="skill-group">
-                <strong>Directory Services:</strong>
-                <span>Active Directory, Group Policy, User/Computer Management</span>
-              </div>
-              <div className="skill-group">
-                <strong>Networking:</strong>
-                <span>TCP/IP, DNS, DHCP, VPN, Firewall Configuration, Network Troubleshooting</span>
-              </div>
-              <div className="skill-group">
-                <strong>Backup & Recovery:</strong>
-                <span>Backup strategies, Disaster Recovery Planning, Data Protection</span>
-              </div>
-              <div className="skill-group">
-                <strong>Cloud Platforms:</strong>
-                <span>AWS (EC2, S3, IAM), Microsoft Azure, Office 365</span>
-              </div>
-              <div className="skill-group">
-                <strong>Scripting & Automation:</strong>
-                <span>PowerShell, Bash, Group Policy, Task Scheduler</span>
-              </div>
-              <div className="skill-group">
-                <strong>Other:</strong>
-                <span>Hardware Troubleshooting, Security Best Practices, Documentation</span>
-              </div>
-            </div>
           </div>
 
           <div className="resume-section">
@@ -67,59 +32,101 @@ export default function Resume() {
             
             <div className="experience-item">
               <div className="experience-header">
-                <h5>IT Support Technician</h5>
-                <span className="date">2023 - Present</span>
+                <h5>Technical Support Specialist I</h5>
+                <span className="date">DEC 2024 - PRESENT</span>
               </div>
-              <p className="company">Tech Solutions Inc. | Location</p>
+              <p className="company">PointSolve Technology, Inc. | Lebanon, PA</p>
               <ul className="experience-list">
-                <li>Provide technical support to 200+ end users across multiple departments</li>
-                <li>Manage user accounts, permissions, and group policies in Active Directory</li>
-                <li>Troubleshoot hardware, software, and network connectivity issues</li>
-                <li>Deploy and maintain Windows servers and workstations</li>
-                <li>Assist in backup and recovery procedures</li>
+                <li>Provide end-to-end IT support for diverse clients including on-site installations, troubleshooting, and remote help desk services within an MSP environment</li>
+                <li>Conduct system reviews to identify recurring challenges and implement proactive measures to improve network performance and reliability</li>
+                <li>Maintain detailed client documentation and ensure seamless integration of third-party business applications</li>
+                <li>Manage multiple client environments simultaneously, utilizing advanced problem-solving and communication skills</li>
+                <li>Apply knowledge of emerging technologies to deliver secure, scalable IT solutions aligned with client operational requirements</li>
               </ul>
             </div>
 
             <div className="experience-item">
               <div className="experience-header">
-                <h5>Junior IT Support Technician</h5>
-                <span className="date">2022 - 2023</span>
+                <h5>PC Deployment Technician</h5>
+                <span className="date">SEP 2024 - DEC 2024</span>
               </div>
-              <p className="company">Previous Company | Location</p>
+              <p className="company">All Lines Technology | Harrisburg, PA</p>
               <ul className="experience-list">
-                <li>Provided first-line technical support via helpdesk ticketing system</li>
-                <li>Assisted with system installations and software deployments</li>
-                <li>Maintained IT asset inventory and documentation</li>
-                <li>Supported network and infrastructure team with routine tasks</li>
+                <li>Executed large-scale hardware rollouts across multiple healthcare facilities, ensuring compliance with UPMC's IT standards</li>
+                <li>Conducted comprehensive site surveys to assess technical requirements and verify asset deployment accuracy</li>
+                <li>Managed imaging, configuration, and deployment of end-user devices, integrating into UPMC's Active Directory environment</li>
+                <li>Collaborated with cross-functional teams to optimize infrastructure and ensure secure systems integration</li>
+              </ul>
+            </div>
+
+            <div className="experience-item">
+              <div className="experience-header">
+                <h5>Help Desk Analyst</h5>
+                <span className="date">JAN 2022 - MAY 2024</span>
+              </div>
+              <p className="company">Kutztown University | Kutztown, PA</p>
+              <ul className="experience-list">
+                <li>Collaborated with senior leadership to provide regular IT service performance updates</li>
+                <li>Addressed client inquiries via phone, email, and ticketing systems, resolving technical issues promptly</li>
+                <li>Specialized in remote network troubleshooting and on-site technical support for classrooms</li>
+                <li>Directed service calls and tickets to appropriate teams, improving response times and user satisfaction</li>
               </ul>
             </div>
           </div>
 
           <div className="resume-section">
-            <h4>Certifications & Education</h4>
+            <h4>Technical Skills</h4>
+            <div className="resume-skills">
+              <div className="skill-group">
+                <strong>IT Support:</strong>
+                <span>Help Desk Support, Remote Troubleshooting, Technical Documentation, On-site Support</span>
+              </div>
+              <div className="skill-group">
+                <strong>Operating Systems:</strong>
+                <span>Windows (Systems & Workstations), Linux (Ubuntu, CentOS, Kali)</span>
+              </div>
+              <div className="skill-group">
+                <strong>Networking:</strong>
+                <span>TCP/IP, DNS, DHCP, Wireshark, Network Troubleshooting</span>
+              </div>
+              <div className="skill-group">
+                <strong>Cloud & Infrastructure:</strong>
+                <span>AWS, DigitalOcean, Active Directory, Office 365</span>
+              </div>
+              <div className="skill-group">
+                <strong>Database Management:</strong>
+                <span>SQL, MySQL, MariaDB, PostgreSQL</span>
+              </div>
+              <div className="skill-group">
+                <strong>Scripting & Development:</strong>
+                <span>Python, Bash Scripting</span>
+              </div>
+              <div className="skill-group">
+                <strong>Soft Skills:</strong>
+                <span>Problem-Solving, Communication, Collaboration, Documentation, Adaptability</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="resume-section">
+            <h4>Education</h4>
             <div className="resume-certs">
               <div className="cert-item">
-                <strong>CompTIA A+</strong> - <em>In Progress / Completed</em>
+                <strong>B.S. Information Technology (ABET Accredited)</strong> - Kutztown University of Pennsylvania (MAY 2024)
               </div>
               <div className="cert-item">
-                <strong>CompTIA Network+</strong> - <em>Target: 2026</em>
+                <strong>Relevant Coursework:</strong> Computer Networks, Advanced Information Security, Unix: Scripting and Administration, Computing Systems Integration, Data Mining & Analytics, Software Engineering
               </div>
               <div className="cert-item">
-                <strong>CompTIA Security+</strong> - <em>Target: 2026</em>
-              </div>
-              <div className="cert-item">
-                <strong>Microsoft Certified: Azure Fundamentals (AZ-900)</strong> - <em>Optional</em>
-              </div>
-              <div className="cert-item">
-                <strong>Bachelor's Degree in Information Technology</strong> - <em>University Name</em>
+                <strong>Involvement:</strong> Men's Club Soccer Secretary
               </div>
             </div>
           </div>
         </div>
 
         <div className="resume-actions">
-          <a href="/resume.pdf" download className="resume-btn">📥 Download Resume (PDF)</a>
-          <a href="mailto:your.email@example.com" className="resume-btn secondary">📧 Email Me</a>
+          <a href="mailto:nateshut1@gmail.com" className="resume-btn">📧 Email Me</a>
+          <a href="https://github.com/NathanShutter" target="_blank" rel="noopener noreferrer" className="resume-btn">💻 GitHub</a>
         </div>
       </div>
     </section>

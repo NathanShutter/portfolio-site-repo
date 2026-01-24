@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <p>&copy; {currentYear} IT Professional. All rights reserved.</p>
-        <p>Pursuing CompTIA Security+ | Certified in IT Support</p>
+        <p>&copy; {currentYear} Nathan Shutter. All rights reserved.</p>
+        <p>B.S. Information Technology | Technical Support Specialist</p>
       </div>
     </footer>
   )

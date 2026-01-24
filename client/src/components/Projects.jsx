@@ -2,30 +2,30 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'Active Directory Migration Project',
-      description: 'Successfully migrated 500+ user accounts to new AD infrastructure with zero downtime using PowerShell automation and delegation strategies.',
-      tech: ['Active Directory', 'PowerShell', 'Group Policy', 'Migration'],
+      title: 'Touch-And-Go',
+      description: 'University Fingerprint Scanner Attendance System. Developed a college attendance system using a fingerprint scanner, Raspberry Pi, and LCD screen, hosted on AWS EC2 with a MySQL database for managing user and course information.',
+      tech: ['Raspberry Pi', 'AWS EC2', 'MySQL', 'Python', 'Fingerprint Scanner'],
       link: '#'
     },
     {
       id: 2,
-      title: 'Virtual Infrastructure Setup',
-      description: 'Designed and deployed virtualized environment with VMware ESXi, implemented HA clustering, and automated backup solutions for enterprise data center.',
-      tech: ['VMware', 'Hyper-V', 'Clustering', 'Backup Strategy'],
+      title: 'SeatSense',
+      description: 'Patient Seating Monitor Sensor & Web App developed in collaboration with Saint Luke\'s Health Network. Notifies caregivers of missed check-ins or excessive sitting time, with data accessible through a web application. Successfully handed off to the health network for implementation.',
+      tech: ['Web App', 'Sensor Integration', 'Healthcare Tech', 'Data Management'],
       link: '#'
     },
     {
       id: 3,
-      title: 'Network Security Implementation',
-      description: 'Configured enterprise firewall rules, implemented VPN infrastructure, and established network segmentation to improve security posture.',
-      tech: ['Firewalls', 'VPN', 'Network Security', 'Troubleshooting'],
+      title: 'PC Deployment at UPMC',
+      description: 'Executed large-scale hardware rollouts across multiple healthcare facilities, managing imaging, configuration, and deployment of end-user devices. Integrated systems into UPMC\'s Active Directory environment while ensuring compliance with IT standards.',
+      tech: ['Active Directory', 'Hardware Deployment', 'Imaging', 'Healthcare IT'],
       link: '#'
     },
     {
       id: 4,
-      title: 'Disaster Recovery & Backup Plan',
-      description: 'Developed comprehensive backup and disaster recovery strategy, tested failover procedures, achieving 99.5% RTO/RPO compliance.',
-      tech: ['Backup Solutions', 'Recovery', 'Documentation', 'Testing'],
+      title: 'MSP Client Infrastructure Management',
+      description: 'Managed multiple diverse client environments simultaneously at PointSolve Technology as Technical Support Specialist. Conducted system reviews, implemented proactive measures, and maintained detailed client documentation for seamless third-party application integration.',
+      tech: ['MSP Environment', 'System Optimization', 'Client Management', 'Network Performance'],
       link: '#'
     }
   ]
@@ -33,7 +33,7 @@ export default function Projects() {
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <h2>IT Projects & Achievements</h2>
+        <h2>Projects & Professional Work</h2>
         <div className="projects-grid">
           {projects.map(project => (
             <div key={project.id} className="project-card">
