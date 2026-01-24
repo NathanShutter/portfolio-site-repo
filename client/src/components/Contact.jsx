@@ -6,6 +6,8 @@ export default function Contact() {
     email: '',
     message: ''
   })
+  const [loading, setLoading] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState('')
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -15,11 +17,34 @@ export default function Contact() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('Thanks for reaching out! I\'ll get back to you soon.')
-    setFormData({ name: '', email: '', message: '' })
+    setLoading(true)
+    setSubmitStatus('')
+
+    try {
+      const response = await fetch('https://api.n8shutter.dev/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setSubmitStatus('✅ Message sent successfully! I\'ll get back to you soon.')
+        setFormData({ name: '', email: '', message: '' })
+      } else {
+        setSubmitStatus('❌ Failed to send message. Please try again.')
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      setSubmitStatus('❌ Error sending message. Please try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -45,6 +70,7 @@ export default function Contact() {
               value={formData.name}
               onChange={handleChange}
               required
+              disabled={loading}
             />
             <input
               type="email"
@@ -53,6 +79,7 @@ export default function Contact() {
               value={formData.email}
               onChange={handleChange}
               required
+              disabled={loading}
             />
             <textarea
               name="message"
@@ -61,8 +88,12 @@ export default function Contact() {
               value={formData.message}
               onChange={handleChange}
               required
+              disabled={loading}
             ></textarea>
-            <button type="submit" className="submit-button">Send Message</button>
+            <button type="submit" className="submit-button" disabled={loading}>
+              {loading ? 'Sending...' : 'Send Message'}
+            </button>
+            {submitStatus && <p className="submit-status">{submitStatus}</p>}
           </form>
         </div>
       </div>
