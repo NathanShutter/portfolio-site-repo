@@ -13,27 +13,13 @@ export default function Projects() {
       description: 'Patient Seating Monitor Sensor & Web App developed in collaboration with Saint Luke\'s Health Network. Notifies caregivers of missed check-ins or excessive sitting time, with data accessible through a web application. Successfully handed off to the health network for implementation.',
       tech: ['Web App', 'Sensor Integration', 'Healthcare Tech', 'Data Management'],
       link: '#'
-    },
-    {
-      id: 3,
-      title: 'PC Deployment at UPMC',
-      description: 'Executed large-scale hardware rollouts across multiple healthcare facilities, managing imaging, configuration, and deployment of end-user devices. Integrated systems into UPMC\'s Active Directory environment while ensuring compliance with IT standards.',
-      tech: ['Active Directory', 'Hardware Deployment', 'Imaging', 'Healthcare IT'],
-      link: '#'
-    },
-    {
-      id: 4,
-      title: 'MSP Client Infrastructure Management',
-      description: 'Managed multiple diverse client environments simultaneously at PointSolve Technology as Technical Support Specialist. Conducted system reviews, implemented proactive measures, and maintained detailed client documentation for seamless third-party application integration.',
-      tech: ['MSP Environment', 'System Optimization', 'Client Management', 'Network Performance'],
-      link: '#'
     }
   ]
 
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <h2>Projects & Professional Work</h2>
+        <h2>Featured Projects</h2>
         <div className="projects-grid">
           {projects.map(project => (
             <div key={project.id} className="project-card">

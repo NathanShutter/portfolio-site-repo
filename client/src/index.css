@@ -254,6 +254,116 @@ body {
   color: #34D399;
 }
 
+/* Experience Section */
+.experience {
+  padding: 6rem 0;
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.experience h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.experience-timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--primary), rgba(16, 185, 129, 0.3));
+}
+
+.timeline-item {
+  margin-bottom: 2.5rem;
+  position: relative;
+  padding-left: 100px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 12px;
+  top: 5px;
+  width: 36px;
+  height: 36px;
+  background-color: var(--primary);
+  border: 4px solid var(--bg);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+}
+
+.timeline-content {
+  background-color: var(--bg);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15);
+  transform: translateX(10px);
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  gap: 1rem;
+}
+
+.job-header h3 {
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.job-period {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.company-name {
+  color: var(--text-muted);
+  margin: 0.25rem 0 0 0;
+  font-size: 1.05rem;
+}
+
+.job-location {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.job-description {
+  color: var(--text);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.job-highlights {
+  margin-left: 1.5rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.job-highlights li {
+  margin-bottom: 0.5rem;
+}
+
 /* Resume Section */
 .resume {
   padding: 6rem 0;
