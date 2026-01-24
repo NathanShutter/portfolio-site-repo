@@ -126,6 +126,7 @@ export default function Resume() {
 
         <div className="resume-actions">
           <a href="mailto:nateshut1@gmail.com" className="resume-btn">📧 Email Me</a>
+          <a href="https://www.linkedin.com/in/nathan-shutter-abc123" target="_blank" rel="noopener noreferrer" className="resume-btn">💼 LinkedIn</a>
           <a href="https://github.com/NathanShutter" target="_blank" rel="noopener noreferrer" className="resume-btn">💻 GitHub</a>
         </div>
       </div>
