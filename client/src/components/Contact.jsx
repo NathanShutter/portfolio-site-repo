@@ -22,8 +22,13 @@ export default function Contact() {
     setLoading(true)
     setSubmitStatus('')
 
+    // Determine API URL based on environment
+    const apiUrl = window.location.hostname === 'localhost' 
+      ? 'http://localhost:5000/api/contact'
+      : 'https://api.n8shutter.dev/api/contact'
+
     try {
-      const response = await fetch('https://api.n8shutter.dev/api/contact', {
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -38,6 +43,7 @@ export default function Contact() {
         setFormData({ name: '', email: '', message: '' })
       } else {
         setSubmitStatus('❌ Failed to send message. Please try again.')
+        console.error('Error:', data)
       }
     } catch (error) {
       console.error('Error:', error)
