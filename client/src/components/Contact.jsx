@@ -25,7 +25,7 @@ export default function Contact() {
     // Determine API URL based on environment
     const apiUrl = window.location.hostname === 'localhost' 
       ? 'http://localhost:5000/api/contact'
-      : 'https://api.n8shutter.dev/api/contact'
+      : `${window.location.protocol}//${window.location.hostname}/api/contact`
 
     try {
       const response = await fetch(apiUrl, {
