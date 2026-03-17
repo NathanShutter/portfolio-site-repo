@@ -1,58 +1,37 @@
 # Portfolio Site
 
-A full-stack portfolio website built with React (Vite) frontend and Express.js backend.
+This repository now contains a client-only React (Vite) portfolio site. The previous Express backend has been removed and the app is served purely from the client.
 
-## Project Structure
+## Project structure
 
 ```
 portfolio-site-repo/
-├── server/          # Express API backend
-│   ├── index.js
-│   ├── package.json
-│   └── .env
-└── client/          # React Vite frontend
-    ├── src/
-    ├── package.json
-    └── vite.config.js
+├── client/          # React Vite frontend (src, public, package.json)
+└── package.json     # root scripts to run the client
 ```
 
-## Getting Started
+## Getting started
 
-### Backend Setup
+Install client dependencies and run the dev server:
 
 ```bash
-cd server
-npm install
-npm run dev
+npm --prefix client install
+npm --prefix client run dev
 ```
 
-Server runs on `http://localhost:5000`
-
-### Frontend Setup
+Build for production:
 
 ```bash
-cd client
-npm install
-npm run dev
+npm --prefix client run build
+npm --prefix client run preview
 ```
 
-Client runs on `http://localhost:5173`
+## Project pages
 
-## Available Scripts
+- Projects now have a dedicated detail page at `/projects/:id`.
+- Project data is in `client/src/data/projects.js` and the template is `client/src/pages/ProjectPage.jsx`.
 
-### Server
-- `npm start` - Run production server
-- `npm run dev` - Run development server with auto-reload
+## Notes
 
-### Client
-- `npm run dev` - Start dev server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-
-## Features to Add
-
-- [ ] Create portfolio project showcase page
-- [ ] Add contact form
-- [ ] Setup database (MongoDB/PostgreSQL)
-- [ ] Add authentication
-- [ ] Deploy to hosting platform
+- The backend (server/) was removed. To restore, use git history.
+- Root package.json was updated to only manage client scripts.
