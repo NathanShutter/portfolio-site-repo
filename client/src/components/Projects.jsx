@@ -9,6 +9,7 @@ export default function Projects() {
         <div className="projects-grid">
           {projects.map(project => (
             <div key={project.id} className="project-card">
+              {project.image && <img src={project.image} alt={`${project.title} thumbnail`} className="project-thumb" />}
               <div className="project-header">
                 <h3>{project.title}</h3>
               </div>
