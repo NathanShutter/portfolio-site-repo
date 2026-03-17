@@ -65,7 +65,6 @@ export default function Contact() {
               <a href="mailto:nateshut1@gmail.com" className="contact-link">📧 Email</a>
               <a href="https://github.com/NathanShutter" target="_blank" rel="noopener noreferrer" className="contact-link">💻 GitHub</a>
               <a href="https://www.linkedin.com/in/nathan-shutter-abc123" target="_blank" rel="noopener noreferrer" className="contact-link">💼 LinkedIn</a>
-              <a href="tel:(717)701-9942" className="contact-link">📱 Call Me</a>
             </div>
           </div>
           <form className="contact-form" onSubmit={handleSubmit}>

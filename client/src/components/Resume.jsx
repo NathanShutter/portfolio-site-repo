@@ -112,7 +112,7 @@ export default function Resume() {
             <h4>Education</h4>
             <div className="resume-certs">
               <div className="cert-item">
-                <strong>B.S. Information Technology (ABET Accredited)</strong> - Kutztown University of Pennsylvania (MAY 2024)
+                <strong>B.S. Information Technology (ABET Accredited)</strong> - Kutztown University of Pennsylvania (May 2024)
               </div>
               <div className="cert-item">
                 <strong>Relevant Coursework:</strong> Computer Networks, Advanced Information Security, Unix: Scripting and Administration, Computing Systems Integration, Data Mining & Analytics, Software Engineering
