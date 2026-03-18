@@ -7,7 +7,7 @@ const projects = [
     tech: ['Raspberry Pi', 'AWS EC2', 'MySQL', 'Python', 'Fingerprint Scanner'],
     link: 'https://example.com/touch-and-go',
     repo: '',
-    image: '/cloud.svg'
+    image: '/images/projects/touch-and-go.png'
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const projects = [
     tech: ['Web App', 'Sensor Integration', 'Healthcare Tech', 'Data Management'],
     link: 'https://example.com/seatsense',
     repo: '',
-    image: '/cloud.svg'
+    image: '/images/projects/seatsense.png'
   }
 ]
 

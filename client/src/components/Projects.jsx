@@ -14,10 +14,8 @@ export default function Projects() {
                 <h3>{project.title}</h3>
               </div>
               <p className="project-description">{project.description}</p>
-              <div className="project-tech">
-                {project.tech.map((tech, idx) => (
-                  <span key={idx} className="tech-tag">{tech}</span>
-                ))}
+              <div className="project-tech" aria-label={`Technologies used: ${project.tech.join(', ')}`}>
+                {project.tech.join(' · ')}
               </div>
               <Link to={`/projects/${project.id}`} className="project-link">Learn More →</Link>
             </div>
