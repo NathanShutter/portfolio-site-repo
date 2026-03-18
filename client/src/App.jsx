@@ -9,15 +9,16 @@ import Resume from './components/Resume'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ProjectPage from './pages/ProjectPage'
-
-function Home() {
+import FeaturedProject from './components/FeaturedProject'
+nfunction Home() {
   return (
     <div className="app">
       <Header />
       <Hero />
       <About />
-      <Experience />
+      <FeaturedProject />
       <Projects />
+      <Experience />
       <Resume />
       <Contact />
       <Footer />

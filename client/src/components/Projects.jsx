@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <h2>Featured Projects</h2>
+        <h2>Projects</h2>
         <div className="projects-grid">
           {projects.map(project => (
             <div key={project.id} className="project-card">
@@ -17,7 +17,7 @@ export default function Projects() {
               <div className="project-tech" aria-label={`Technologies used: ${project.tech.join(', ')}`}>
                 {project.tech.join(' · ')}
               </div>
-              <Link to={`/projects/${project.id}`} className="project-link">Learn More →</Link>
+              <Link to={`/projects/${project.id}`} className="project-link project-btn">View Project</Link>
             </div>
           ))}
         </div>
