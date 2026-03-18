@@ -10,7 +10,8 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ProjectPage from './pages/ProjectPage'
 import FeaturedProject from './components/FeaturedProject'
-nfunction Home() {
+
+function Home() {
   return (
     <div className="app">
       <Header />
