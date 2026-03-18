@@ -218,7 +218,7 @@ body {
 .project-header h3 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: var(--text);
+  color: var(--primary);
 }
 
 .project-description {
@@ -564,9 +564,16 @@ body {
 }
 
 .contact-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-info {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .contact-info h3 {
