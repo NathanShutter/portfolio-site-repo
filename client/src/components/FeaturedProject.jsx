@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import projects from '../data/projects'
-nexport default function FeaturedProject() {
+
+export default function FeaturedProject() {
   const project = projects[0]
   if (!project) return null
-n  return (
+
+  return (
     <section className="featured" aria-labelledby="featured-title">
       <div className="container featured-grid">
         <div className="featured-media">
