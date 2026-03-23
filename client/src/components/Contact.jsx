@@ -2,28 +2,29 @@ import React from 'react'
 
 export default function Contact() {
   return (
-    <section id="contact" className="contact">
-      <div className="container">
-        <h2>Let's Connect</h2>
-        <p className="contact-intro" style={{textAlign: 'center', color: 'var(--text-muted)', maxWidth: 700, margin: '0.5rem auto 1.5rem'}}>Open to discussing IT infrastructure, automation, and technical opportunities. Reach out via email or connect on GitHub / LinkedIn.</p>
-n        <div className="contact-container">
-          <div className="contact-grid">
-            <a href="mailto:nateshut1@gmail.com" className="contact-card">
-              <div className="contact-icon">📧</div>
-              <div className="contact-title">Email</div>
-              <div className="contact-link">nateshut1@gmail.com</div>
-            </a>
-n            <a href="https://www.linkedin.com/in/nathan-shutter-abc123" target="_blank" rel="noopener noreferrer" className="contact-card">
-              <div className="contact-icon">💼</div>
-              <div className="contact-title">LinkedIn</div>
-              <div className="contact-link">/in/nathan-shutter-abc123</div>
-            </a>
-n            <a href="https://github.com/NathanShutter" target="_blank" rel="noopener noreferrer" className="contact-card">
-              <div className="contact-icon">💻</div>
-              <div className="contact-title">GitHub</div>
-              <div className="contact-link">@NathanShutter</div>
-            </a>
-          </div>
+    <section id="contact" className="py-20">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Let's Connect</h2>
+        <p className="text-slate-300 leading-7 max-w-2xl mx-auto mt-4 mb-8">Open to discussing IT infrastructure, automation, and technical opportunities. Reach out via email or connect on GitHub / LinkedIn.</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch justify-items-center">
+          <a href="mailto:nateshut1@gmail.com" className="w-full max-w-sm rounded-2xl border border-white/10 bg-white/5 px-6 py-6 text-left hover:border-white/30 transition">
+            <div className="text-3xl">📧</div>
+            <div className="font-semibold text-white mt-3">Email</div>
+            <div className="text-slate-300 mt-1">nateshut1@gmail.com</div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/nathan-shutter-abc123" target="_blank" rel="noopener noreferrer" className="w-full max-w-sm rounded-2xl border border-white/10 bg-white/5 px-6 py-6 text-left hover:border-white/30 transition">
+            <div className="text-3xl">💼</div>
+            <div className="font-semibold text-white mt-3">LinkedIn</div>
+            <div className="text-slate-300 mt-1">/in/nathan-shutter-abc123</div>
+          </a>
+
+          <a href="https://github.com/NathanShutter" target="_blank" rel="noopener noreferrer" className="w-full max-w-sm rounded-2xl border border-white/10 bg-white/5 px-6 py-6 text-left hover:border-white/30 transition">
+            <div className="text-3xl">💻</div>
+            <div className="font-semibold text-white mt-3">GitHub</div>
+            <div className="text-slate-300 mt-1">@NathanShutter</div>
+          </a>
         </div>
       </div>
     </section>

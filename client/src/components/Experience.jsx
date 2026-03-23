@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default function Experience() {
   const jobs = [
     {
@@ -45,29 +47,26 @@ export default function Experience() {
   ]
 
   return (
-    <section id="experience" className="experience">
-      <div className="container">
-        <h2>Professional Experience</h2>
-        <div className="experience-timeline">
-          {jobs.map((job, index) => (
-            <div key={job.id} className="timeline-item">
-              <div className="timeline-marker"></div>
-              <div className="timeline-content">
-                <div className="job-header">
-                  <div>
-                    <h3>{job.title}</h3>
-                    <p className="company-name">{job.company}</p>
-                  </div>
-                  <span className="job-period">{job.period}</span>
+    <section id="experience" className="py-20">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Professional Experience</h2>
+        <div className="mt-8 space-y-6">
+          {jobs.map((job) => (
+            <div key={job.id} className="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="text-xl font-semibold text-white">{job.title}</h3>
+                  <p className="text-slate-300 mt-1">{job.company}</p>
                 </div>
-                <p className="job-location">📍 {job.location}</p>
-                <p className="job-description">{job.description}</p>
-                <ul className="job-highlights">
-                  {job.highlights.map((highlight, idx) => (
-                    <li key={idx}>{highlight}</li>
-                  ))}
-                </ul>
+                <div className="text-slate-300 font-medium">{job.period}</div>
               </div>
+              <p className="text-slate-300 leading-7 mt-4">📍 {job.location}</p>
+              <p className="text-slate-300 leading-7 mt-3">{job.description}</p>
+              <ul className="text-slate-300 mt-3 list-disc list-inside space-y-1">
+                {job.highlights.map((h, i) => (
+                  <li key={i}>{h}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

@@ -5,7 +5,6 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
-import Resume from './components/Resume'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ProjectPage from './pages/ProjectPage'
@@ -20,7 +19,6 @@ function Home() {
       <FeaturedProject />
       <Projects />
       <Experience />
-      <Resume />
       <Contact />
       <Footer />
     </div>
