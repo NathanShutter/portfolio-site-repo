@@ -9,16 +9,16 @@ export default function Hero() {
 
           {/* Left: intro card */}
           <div className="flex justify-center md:justify-start">
-            <div className="rounded-2xl border border-white/6 bg-white/4 p-8 shadow-sm mx-auto md:mx-0 max-w-[720px]">
+            <div className="card card-compact w-full max-w-[720px] bg-base-200 border border-base-300 p-8 shadow-sm mx-auto md:mx-0">
               <div className="space-y-6 text-center md:text-left">
                 <h1 className="text-4xl md:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-600">
                   Nathan Shutter
                 </h1>
-                <p className="text-slate-300 leading-7 text-lg md:text-xl">Technical Support Specialist | IT Professional</p>
-                <p className="text-slate-300 leading-7 max-w-prose mx-auto md:mx-0">Delivering end-to-end IT solutions with expertise in troubleshooting, system optimization, and client support.</p>
+                <p className="text-base-content/80 leading-7 text-lg md:text-xl">Technical Support Specialist | IT Professional</p>
+                <p className="text-base-content/70 leading-7 max-w-prose mx-auto md:mx-0">Delivering end-to-end IT solutions with expertise in troubleshooting, system optimization, and client support.</p>
                 <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                  <a href="#projects" className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold rounded-xl px-5 py-3">View Projects</a>
-                  <a href="/resume.pdf" download className="border border-white/15 hover:border-white/30 text-white rounded-xl px-5 py-3">Download Resume</a>
+                  <a href="#projects" className="btn btn-primary">View Projects</a>
+                  <a href="/resume.pdf" download className="btn btn-outline">Download Resume</a>
                 </div>
               </div>
             </div>
@@ -27,9 +27,9 @@ export default function Hero() {
           {/* Right: headshot framed */}
           <div className="flex items-center justify-center">
             <div className="relative w-full max-w-md">
-              <img src={headshot} alt="Nathan Shutter" className="w-full h-72 md:h-80 object-cover rounded-2xl border border-white/10 shadow-lg" />
+              <img src={headshot} alt="Nathan Shutter" className="w-full h-72 md:h-80 object-cover rounded-2xl border border-base-300 shadow-lg" />
               {/* subtle frame */}
-              <div className="absolute -inset-px rounded-2xl border border-white/6 pointer-events-none" />
+              <div className="absolute -inset-px rounded-2xl border border-base-200 pointer-events-none" />
             </div>
           </div>
 
