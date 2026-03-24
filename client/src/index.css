@@ -128,14 +128,7 @@ h2 {
    -webkit-text-fill-color: transparent;
 }
 
-/* legacy nav rules removed to prevent colliding with DaisyUI */
-
-   color: var(--text);
-   text-decoration: none;
-   font-weight: 500;
-}
-
-/* Hero styles removed — migrated to Tailwind utilities in src/components/Hero.jsx */
+/* legacy nav rules removed to prevent colliding with DaisyUI */\r\n/* Hero styles removed — migrated to Tailwind utilities in src/components/Hero.jsx */
 
 /* ----------------------
    Skills
@@ -565,3 +558,4 @@ h2 {
 */
 
 /* End conservative refactor */
+
