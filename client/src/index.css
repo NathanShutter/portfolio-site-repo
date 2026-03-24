@@ -1,6 +1,8 @@
 /* Tailwind base/components/utilities - enables utility classes alongside existing CSS */
 @import "tailwindcss";
 
+@plugin "daisyui";
+
 /* Conservatively refactored stylesheet using existing selectors only
    - Kept original selector names
    - Removed duplicates and standardized spacing/responsiveness
@@ -10,229 +12,560 @@
    Variables (theme)
    ---------------------- */
 :root {
-  --primary: #10B981;
-  --primary-dark: #059669;
-  --bg: #1F3044;
-  --surface: #263849;
-  --text: #FFFFFF;
-  --text-muted: #C5CDD9;
-  --border: #3d4a5c;
+   --primary: #10B981;
+   --primary-dark: #059669;
+   --bg: #1F3044;
+   --surface: #263849;
+   --text: #FFFFFF;
+   --text-muted: #C5CDD9;
+   --border: #3d4a5c;
 
-  --container-max: 1100px;
-  --section-padding: 80px; /* default, adjusted at breakpoints */
-  --radius: 12px;
+   --container-max: 1100px;
+   --section-padding: 80px;
+   /* default, adjusted at breakpoints */
+   --radius: 12px;
 
-  --shadow-sm: 0 6px 18px rgba(2,6,23,0.06);
-  --shadow-md: 0 12px 30px rgba(2,6,23,0.12);
-  --trans: 180ms ease;
+   --shadow-sm: 0 6px 18px rgba(2, 6, 23, 0.06);
+   --shadow-md: 0 12px 30px rgba(2, 6, 23, 0.12);
+   --trans: 180ms ease;
 }
 
 /* ----------------------
    Reset / Base
    ---------------------- */
-* { box-sizing: border-box; }
-html,body,#root { height:100%; }
-html { scroll-behavior: smooth; }
+* {
+   box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+   height: 100%;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
 body {
-  margin:0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  -webkit-font-smoothing:antialiased;
+   margin: 0;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+   background: var(--bg);
+   color: var(--text);
+   line-height: 1.6;
+   -webkit-font-smoothing: antialiased;
 }
 
 /* ----------------------
    Container pattern
    ---------------------- */
 .container {
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 20px;
+   max-width: var(--container-max);
+   margin: 0 auto;
+   padding: 0 20px;
 }
 
 /* ----------------------
    Section spacing (apply to main sections)
    ---------------------- */
-.hero, .about, .skills, .featured, .projects, .experience, .resume, .contact {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+.hero,
+.about,
+.skills,
+.featured,
+.projects,
+.experience,
+.resume,
+.contact {
+   padding-top: var(--section-padding);
+   padding-bottom: var(--section-padding);
 }
 
 /* Section headings & text
    Preserve existing h2/subtitle classes used in components */
-h2 { font-size: 2rem; margin: 0 0 18px; }
-.subtitle { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 12px; }
-.bio { color: var(--text-muted); margin-bottom: 18px; }
+h2 {
+   font-size: 2rem;
+   margin: 0 0 18px;
+}
+
+.subtitle {
+   font-size: 1.2rem;
+   color: var(--text-muted);
+   margin-bottom: 12px;
+}
+
+.bio {
+   color: var(--text-muted);
+   margin-bottom: 18px;
+}
 
 /* ----------------------
    Header / Navigation
    ---------------------- */
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: rgba(15,23,42,0.95);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(8px);
+   position: sticky;
+   top: 0;
+   z-index: 100;
+   background-color: rgba(15, 23, 42, 0.95);
+   border-bottom: 1px solid var(--border);
+   backdrop-filter: blur(8px);
 }
+
 .navbar {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  padding: 14px 20px;
-  max-width: var(--container-max);
-  margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 16px;
+   padding: 14px 20px;
+   max-width: var(--container-max);
+   margin: 0 auto;
 }
-.logo { font-weight:700; font-size:1.2rem; background: linear-gradient(135deg,var(--primary),#34D399); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-.nav-links { display:flex; gap:18px; list-style:none; margin:0; padding:0; flex-wrap:wrap; }
-.nav-links a { color:var(--text); text-decoration:none; font-weight:500; }
+
+.logo {
+   font-weight: 700;
+   font-size: 1.2rem;
+   background: linear-gradient(135deg, var(--primary), #34D399);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+   display: flex;
+   gap: 18px;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   flex-wrap: wrap;
+}
+
+.nav-links a {
+   color: var(--text);
+   text-decoration: none;
+   font-weight: 500;
+}
 
 /* Hero styles removed — migrated to Tailwind utilities in src/components/Hero.jsx */
 
 /* ----------------------
    Skills
    ---------------------- */
-/* Keep original names: .skills, .skills-container, .skills-grid, .skill-card */
-.skills { /* no extra bg */ }
+/* Skills section now uses Tailwind utilities + DaisyUI card styles.
+   - Grid, spacing, and responsive behaviour handled in JSX via Tailwind classes.
+   - Individual skill cards use DaisyUI "card" and "bg-base-200 / border-base-300 / text-base-content" classes.
+   The original .skills, .skills-container, .skills-grid, and .skill-card rules were intentionally removed.
+*/
+
+/* The following utility fallbacks are left intentionally minimal in case components still reference them. */
+.skills {}
 .skills-container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
-.skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; justify-items: center; }
-.skill-card {
-  width: 100%; max-width: 220px;
-  background: rgba(255,255,255,0.02);
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.03);
-  text-align: center;
-  font-weight: 600;
-  transition: transform var(--trans), box-shadow var(--trans);
-}
-.skill-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
 
 /* ----------------------
    Featured Project
    ---------------------- */
-.featured { }
-.featured-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items:center; }
-.featured-image { width:100%; border-radius: var(--radius); box-shadow: var(--shadow-sm); object-fit:cover; }
-.featured-placeholder { width:100%; height:320px; border-radius: var(--radius); background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(59,130,246,0.04)); }
+.featured {}
+
+.featured-grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 20px;
+   align-items: center;
+}
+
+.featured-image {
+   width: 100%;
+   border-radius: var(--radius);
+   box-shadow: var(--shadow-sm);
+   object-fit: cover;
+}
+
+.featured-placeholder {
+   width: 100%;
+   height: 320px;
+   border-radius: var(--radius);
+   background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(59, 130, 246, 0.04));
+}
 
 /* ----------------------
    Projects
    ---------------------- */
-.projects { }
-.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.project-card {
-  background: var(--surface);
-  padding: 16px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  display:flex; flex-direction:column;
-  transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans);
+.projects {}
+
+.projects-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
 }
-.project-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--primary); }
-.project-thumb { width:100%; height:220px; object-fit:cover; border-radius: 8px; margin-bottom: 12px; }
-.project-header h3 { margin:0 0 8px; color: var(--primary); }
-.project-description { color: var(--text-muted); margin-bottom: 12px; flex-grow:1; }
-.project-tech { color: var(--text-muted); margin-bottom: 12px; }
-.project-link { color: var(--primary); text-decoration:none; font-weight:600; }
+
+.project-card {
+   background: var(--surface);
+   padding: 16px;
+   border-radius: 12px;
+   border: 1px solid var(--border);
+   display: flex;
+   flex-direction: column;
+   transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans);
+}
+
+.project-card:hover {
+   transform: translateY(-5px);
+   box-shadow: var(--shadow-md);
+   border-color: var(--primary);
+}
+
+.project-thumb {
+   width: 100%;
+   height: 220px;
+   object-fit: cover;
+   border-radius: 8px;
+   margin-bottom: 12px;
+}
+
+.project-header h3 {
+   margin: 0 0 8px;
+   color: var(--primary);
+}
+
+.project-description {
+   color: var(--text-muted);
+   margin-bottom: 12px;
+   flex-grow: 1;
+}
+
+.project-tech {
+   color: var(--text-muted);
+   margin-bottom: 12px;
+}
+
+.project-link {
+   color: var(--primary);
+   text-decoration: none;
+   font-weight: 600;
+}
 
 /* ----------------------
    Experience timeline
    ---------------------- */
-.experience { }
-.experience-timeline { max-width: 900px; margin: 0 auto; position: relative; }
-.experience-timeline::before { content: ''; position:absolute; left: 30px; top:0; bottom:0; width:2px; background: linear-gradient(to bottom, var(--primary), rgba(16,185,129,0.3)); }
-.timeline-item { position: relative; padding-left: 100px; margin-bottom: 24px; }
-.timeline-marker { position:absolute; left:12px; top:8px; width:36px; height:36px; background: var(--primary); border:4px solid var(--bg); border-radius:50%; box-shadow: 0 0 0 4px rgba(16,185,129,0.2); }
-.timeline-content { background: var(--bg); padding: 16px; border-radius: 12px; border: 1px solid var(--border); transition: transform var(--trans), box-shadow var(--trans); }
-.timeline-content:hover { transform: translateX(6px); box-shadow: var(--shadow-md); border-color: var(--primary); }
-.job-header { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; margin-bottom:8px; }
-.job-period { color: var(--primary); font-weight:600; white-space:nowrap; }
-.company-name, .job-location { color: var(--text-muted); }
-.job-description { color: var(--text); margin-bottom:8px; }
-.job-highlights { color: var(--text-muted); margin-left: 1.25rem; }
+.experience {}
+
+.experience-timeline {
+   max-width: 900px;
+   margin: 0 auto;
+   position: relative;
+}
+
+.experience-timeline::before {
+   content: '';
+   position: absolute;
+   left: 30px;
+   top: 0;
+   bottom: 0;
+   width: 2px;
+   background: linear-gradient(to bottom, var(--primary), rgba(16, 185, 129, 0.3));
+}
+
+.timeline-item {
+   position: relative;
+   padding-left: 100px;
+   margin-bottom: 24px;
+}
+
+.timeline-marker {
+   position: absolute;
+   left: 12px;
+   top: 8px;
+   width: 36px;
+   height: 36px;
+   background: var(--primary);
+   border: 4px solid var(--bg);
+   border-radius: 50%;
+   box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+}
+
+.timeline-content {
+   background: var(--bg);
+   padding: 16px;
+   border-radius: 12px;
+   border: 1px solid var(--border);
+   transition: transform var(--trans), box-shadow var(--trans);
+}
+
+.timeline-content:hover {
+   transform: translateX(6px);
+   box-shadow: var(--shadow-md);
+   border-color: var(--primary);
+}
+
+.job-header {
+   display: flex;
+   justify-content: space-between;
+   gap: 12px;
+   align-items: flex-start;
+   margin-bottom: 8px;
+}
+
+.job-period {
+   color: var(--primary);
+   font-weight: 600;
+   white-space: nowrap;
+}
+
+.company-name,
+.job-location {
+   color: var(--text-muted);
+}
+
+.job-description {
+   color: var(--text);
+   margin-bottom: 8px;
+}
+
+.job-highlights {
+   color: var(--text-muted);
+   margin-left: 1.25rem;
+}
 
 /* ----------------------
    Resume
    ---------------------- */
-.resume { }
-.resume-container { background: var(--surface); padding: 20px; border-radius: 12px; border: 1px solid var(--border); max-width: 900px; margin: 0 auto; }
-.resume-header { text-align:center; padding-bottom: 12px; border-bottom: 1px solid var(--border); margin-bottom:12px; }
-.resume-title { color: var(--text-muted); }
-.resume-actions { display:flex; gap:12px; justify-content:center; }
-.resume-btn { padding:10px 16px; border-radius:8px; background: linear-gradient(135deg,var(--primary),var(--primary-dark)); color:white; text-decoration:none; font-weight:600; }
+.resume {}
+
+.resume-container {
+   background: var(--surface);
+   padding: 20px;
+   border-radius: 12px;
+   border: 1px solid var(--border);
+   max-width: 900px;
+   margin: 0 auto;
+}
+
+.resume-header {
+   text-align: center;
+   padding-bottom: 12px;
+   border-bottom: 1px solid var(--border);
+   margin-bottom: 12px;
+}
+
+.resume-title {
+   color: var(--text-muted);
+}
+
+.resume-actions {
+   display: flex;
+   gap: 12px;
+   justify-content: center;
+}
+
+.resume-btn {
+   padding: 10px 16px;
+   border-radius: 8px;
+   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+   color: white;
+   text-decoration: none;
+   font-weight: 600;
+}
 
 /* ----------------------
    Contact
    ---------------------- */
-.contact { background: var(--surface); }
-.contact-container { max-width: 700px; margin: 0 auto; padding: 0 20px; }
-.contact-content { display:flex; align-items:center; justify-content:center; gap: 24px; }
-.contact-info { max-width: 700px; text-align:center; }
-.contact-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; justify-items:center; margin-top: 12px; }
-.contact-card {
-  width: 200px; max-width:220px; background: var(--surface); padding: 12px; border-radius: 12px; border:1px solid rgba(255,255,255,0.03); text-align:center; transition: transform var(--trans), box-shadow var(--trans);
+.contact {
+   background: var(--surface);
 }
-.contact-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
-.contact-icon { width:56px; height:56px; border-radius:10px; display:flex; align-items:center; justify-content:center; background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(59,130,246,0.03)); margin: 0 auto 8px; }
-.contact-title { font-weight:700; margin-bottom:4px; }
-.contact-link { color: var(--text-muted); font-size: 0.95rem; text-decoration: none; display: inline-block; word-break: break-word; }
+
+.contact-container {
+   max-width: 700px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+.contact-content {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 24px;
+}
+
+.contact-info {
+   max-width: 700px;
+   text-align: center;
+}
+
+.contact-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 12px;
+   justify-items: center;
+   margin-top: 12px;
+}
+
+.contact-card {
+   width: 200px;
+   max-width: 220px;
+   background: var(--surface);
+   padding: 12px;
+   border-radius: 12px;
+   border: 1px solid rgba(255, 255, 255, 0.03);
+   text-align: center;
+   transition: transform var(--trans), box-shadow var(--trans);
+}
+
+.contact-card:hover {
+   transform: translateY(-6px);
+   box-shadow: var(--shadow-md);
+}
+
+.contact-icon {
+   width: 56px;
+   height: 56px;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(59, 130, 246, 0.03));
+   margin: 0 auto 8px;
+}
+
+.contact-title {
+   font-weight: 700;
+   margin-bottom: 4px;
+}
+
+.contact-link {
+   color: var(--text-muted);
+   font-size: 0.95rem;
+   text-decoration: none;
+   display: inline-block;
+   word-break: break-word;
+}
 
 /* ----------------------
    Footer
    ---------------------- */
-.footer { background: var(--surface); border-top:1px solid var(--border); padding: 20px 0; text-align:center; color: var(--text-muted); }
+.footer {
+   background: var(--surface);
+   border-top: 1px solid var(--border);
+   padding: 20px 0;
+   text-align: center;
+   color: var(--text-muted);
+}
 
 /* ----------------------
    Responsive breakpoints
    ---------------------- */
 @media (max-width: 1024px) {
-  :root { --section-padding: 64px; }
-  .skills-grid { grid-template-columns: repeat(3, 1fr); }
-  .projects-grid { grid-template-columns: repeat(2, 1fr); }
-  /* Slightly reduce project thumbnail height on tablets so cards feel less cramped */
-  .project-thumb { height: 180px; }
+   :root {
+      --section-padding: 64px;
+   }
+
+   .skills-grid {
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+   .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   /* Slightly reduce project thumbnail height on tablets so cards feel less cramped */
+   .project-thumb {
+      height: 180px;
+   }
 }
 
 @media (max-width: 768px) {
-  :root { --section-padding: 48px; }
-  /* Hero responsive layout removed — migrated to Tailwind in Hero.jsx */
-  .skills-grid { grid-template-columns: repeat(2, 1fr); }
-  .projects-grid { grid-template-columns: 1fr; }
-  .featured-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
-  /* Resume actions stacked and centered on mobile */
-  .resume-actions { flex-direction: column; align-items: center; }
-  /* Mobile navbar: stack and center nav items */
-  .navbar { flex-direction: column; align-items: center; }
-  .nav-links { justify-content: center; }
-  /* Timeline mobile adjustments */
-  .experience-timeline::before { display:none; }
-  .timeline-item { padding-left: 0; }
-  .timeline-marker { position: relative; left: auto; top: auto; margin-bottom: 8px; }
+   :root {
+      --section-padding: 48px;
+   }
+
+   /* Hero responsive layout removed — migrated to Tailwind in Hero.jsx */
+   .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .projects-grid {
+      grid-template-columns: 1fr;
+   }
+
+   .featured-grid {
+      grid-template-columns: 1fr;
+   }
+
+   .contact-grid {
+      grid-template-columns: 1fr;
+   }
+
+   /* Resume actions stacked and centered on mobile */
+   .resume-actions {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   /* Mobile navbar: stack and center nav items */
+   .navbar {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .nav-links {
+      justify-content: center;
+   }
+
+   /* Timeline mobile adjustments */
+   .experience-timeline::before {
+      display: none;
+   }
+
+   .timeline-item {
+      padding-left: 0;
+   }
+
+   .timeline-marker {
+      position: relative;
+      left: auto;
+      top: auto;
+      margin-bottom: 8px;
+   }
 }
 
 @media (max-width: 480px) {
-  :root { --section-padding: 32px; }
-  /* Hero H1 mobile size removed — handled via Tailwind */
-  .project-thumb { height:160px; }
-  .contact-card { width:100%; max-width:none; }
+   :root {
+      --section-padding: 32px;
+   }
+
+   /* Hero H1 mobile size removed — handled via Tailwind */
+   .project-thumb {
+      height: 160px;
+   }
+
+   .contact-card {
+      width: 100%;
+      max-width: none;
+   }
 }
 
 /* Animation: slide & fade for mobile panels */
 @keyframes slideFadeIn {
-  from { opacity: 0; transform: translateY(-8px); }
-  to   { opacity: 1; transform: translateY(0); }
+   from {
+      opacity: 0;
+      transform: translateY(-8px);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
 }
+
 .animate-slide-fade {
-  animation: slideFadeIn 220ms ease-out;
-  will-change: transform, opacity;
+   animation: slideFadeIn 220ms ease-out;
+   will-change: transform, opacity;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-slide-fade, .hover-3d { transition: none; animation: none; transform: none; }
+
+   .animate-slide-fade,
+   .hover-3d {
+      transition: none;
+      animation: none;
+      transform: none;
+   }
 }
 
 /* Rely on DaisyUI's hover-3d implementation for transforms.
