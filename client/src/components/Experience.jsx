@@ -52,17 +52,17 @@ export default function Experience() {
         <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Professional Experience</h2>
         <div className="mt-8 space-y-6">
           {jobs.map((job) => (
-            <div key={job.id} className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div key={job.id} className="card bg-base-200 border border-base-300 p-6 rounded-2xl">
               <div className="flex items-start justify-between">
                 <div>
-                  <h3 className="text-xl font-semibold text-white">{job.title}</h3>
-                  <p className="text-slate-300 mt-1">{job.company}</p>
+                  <h3 className="text-xl font-semibold text-base-content">{job.title}</h3>
+                  <p className="text-base-content/80 mt-1">{job.company}</p>
                 </div>
-                <div className="text-slate-300 font-medium">{job.period}</div>
+                <div className="text-base-content/80 font-medium">{job.period}</div>
               </div>
-              <p className="text-slate-300 leading-7 mt-4">📍 {job.location}</p>
-              <p className="text-slate-300 leading-7 mt-3">{job.description}</p>
-              <ul className="text-slate-300 mt-3 list-disc list-inside space-y-1">
+              <p className="text-base-content/80 leading-7 mt-4">📍 {job.location}</p>
+              <p className="text-base-content/80 leading-7 mt-3">{job.description}</p>
+              <ul className="text-base-content/80 mt-3 list-disc list-inside space-y-1">
                 {job.highlights.map((h, i) => (
                   <li key={i}>{h}</li>
                 ))}
