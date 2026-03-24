@@ -99,9 +99,9 @@ h2 {
 }
 
 /* ----------------------
-   Header / Navigation
+   Header / Navigation (namespaced)
    ---------------------- */
-.header {
+.site-header {
    position: sticky;
    top: 0;
    z-index: 100;
@@ -110,7 +110,7 @@ h2 {
    backdrop-filter: blur(8px);
 }
 
-.navbar {
+.site-navbar {
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -120,7 +120,7 @@ h2 {
    margin: 0 auto;
 }
 
-.logo {
+.site-logo {
    font-weight: 700;
    font-size: 1.2rem;
    background: linear-gradient(135deg, var(--primary), #34D399);
@@ -128,16 +128,8 @@ h2 {
    -webkit-text-fill-color: transparent;
 }
 
-.nav-links {
-   display: flex;
-   gap: 18px;
-   list-style: none;
-   margin: 0;
-   padding: 0;
-   flex-wrap: wrap;
-}
+/* legacy nav rules removed to prevent colliding with DaisyUI */
 
-.nav-links a {
    color: var(--text);
    text-decoration: none;
    font-weight: 500;
@@ -498,12 +490,12 @@ h2 {
    }
 
    /* Mobile navbar: stack and center nav items */
-   .navbar {
+   .site-navbar {
       flex-direction: column;
       align-items: center;
    }
 
-   .nav-links {
+   .site-nav-links {
       justify-content: center;
    }
 
