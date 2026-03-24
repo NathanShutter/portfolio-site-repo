@@ -24,9 +24,9 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-transparent">
-      <div className="navbar max-w-6xl mx-auto px-6 py-3">
+      <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Left: desktop logo */}
-        <div className="navbar-start hidden md:flex">
+        <div className="hidden md:flex items-center">
           <div className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-600">IT Portfolio</div>
         </div>
 
@@ -36,7 +36,7 @@ export default function Header() {
         </div>
 
         {/* Center nav (desktop) */}
-        <div className="navbar-center hidden md:flex">
+        <div className="hidden md:flex">
           <nav className="menu menu-horizontal px-1 text-base-content">
             {links.map((l) => (
               <a key={l.href} href={l.href} className="hover:text-white">{l.label}</a>
@@ -45,7 +45,7 @@ export default function Header() {
         </div>
 
         {/* Right: mobile menu button */}
-        <div className="navbar-end md:hidden">
+        <div className="md:hidden">
           <button aria-label="Toggle menu" onClick={() => setOpen((v) => !v)} className="btn btn-ghost">
             {open ? '✕' : '☰'}
           </button>
