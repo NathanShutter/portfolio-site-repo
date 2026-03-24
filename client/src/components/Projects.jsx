@@ -15,16 +15,16 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {items.map((project, idx) => (
             project ? (
-              <div key={project.id} className="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <div key={project.id} className="card bg-base-200 border border-base-300 p-6 rounded-2xl">
                 <img src={project.image || placeholder} alt={`${project.title} thumbnail`} className="w-full h-44 object-cover rounded-xl mb-4" />
-                <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-                <p className="text-slate-300 leading-7 mt-2">{project.description}</p>
-                <div className="text-slate-300 mt-3">{project.tech.join(' · ')}</div>
-                <Link to={`/projects/${project.id}`} className="inline-block mt-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold rounded-xl px-5 py-3">View Project</Link>
+                <h3 className="text-xl font-semibold text-base-content">{project.title}</h3>
+                <p className="text-base-content/80 leading-7 mt-2">{project.description}</p>
+                <div className="text-base-content/70 mt-3">{project.tech.join(' · ')}</div>
+                <Link to={`/projects/${project.id}`} className="inline-block mt-4 btn btn-primary">View Project</Link>
               </div>
             ) : (
-              <div key={`placeholder-${idx}`} className="rounded-2xl border border-white/10 bg-white/5 p-6 flex items-center justify-center opacity-60">
-                <div className="text-slate-400">Coming soon</div>
+              <div key={`placeholder-${idx}`} className="card bg-base-200 border border-base-300 p-6 flex items-center justify-center opacity-60 rounded-2xl">
+                <div className="text-base-content/60">Coming soon</div>
               </div>
             )
           ))}
