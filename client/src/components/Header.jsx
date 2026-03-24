@@ -23,26 +23,30 @@ export default function Header() {
   ]
 
   return (
-    <header className="bg-transparent">
-      <div className="max-w-6xl mx-auto px-6 py-4 relative flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-transparent">
+      <div className="navbar max-w-6xl mx-auto px-6 py-3">
         {/* Left: desktop logo */}
-        <div className="hidden md:block text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-600">IT Portfolio</div>
+        <div className="navbar-start hidden md:flex">
+          <div className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-600">IT Portfolio</div>
+        </div>
 
         {/* Center: mobile logo (absolutely centered) */}
         <div className="md:hidden absolute left-1/2 transform -translate-x-1/2 z-10 pointer-events-none">
           <div className="text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-600">IT Portfolio</div>
         </div>
 
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6 text-slate-300">
-          {links.map((l) => (
-            <a key={l.href} href={l.href} className="hover:text-white">{l.label}</a>
-          ))}
-        </nav>
+        {/* Center nav (desktop) */}
+        <div className="navbar-center hidden md:flex">
+          <nav className="menu menu-horizontal px-1 text-base-content">
+            {links.map((l) => (
+              <a key={l.href} href={l.href} className="hover:text-white">{l.label}</a>
+            ))}
+          </nav>
+        </div>
 
-        {/* Mobile menu button */}
-        <div className="md:hidden flex items-center z-20">
-          <button aria-label="Toggle menu" onClick={() => setOpen((v) => !v)} className="p-2 rounded-lg bg-white/5 border border-white/6 text-slate-200 hover:bg-white/6">
+        {/* Right: mobile menu button */}
+        <div className="navbar-end md:hidden">
+          <button aria-label="Toggle menu" onClick={() => setOpen((v) => !v)} className="btn btn-ghost">
             {open ? '✕' : '☰'}
           </button>
         </div>
@@ -52,15 +56,13 @@ export default function Header() {
       {open && (
         <div className="mt-2">
           <div ref={panelRef} className="max-w-3xl mx-auto px-4">
-            <div className="animate-container">
-            <div className="rounded-xl bg-white/4 border border-white/6 p-4 space-y-3 text-center animate-slide-fade">
+            <div className="card bg-base-200 border border-base-300 p-4 space-y-3 text-center animate-slide-fade">
               {links.map((l) => (
-                <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block text-slate-200 py-2 hover:text-white">{l.label}</a>
+                <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block text-base-content py-2 hover:text-white">{l.label}</a>
               ))}
             </div>
           </div>
         </div>
-      </div>
       )}
     </header>
   )
