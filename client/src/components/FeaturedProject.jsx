@@ -10,16 +10,29 @@ export default function FeaturedProject() {
   return (
     <section className="py-20" aria-labelledby="featured-title">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div>
-            <img src={project.image || placeholder} alt={`${project.title} screenshot`} className="w-full rounded-2xl border border-base-300 bg-base-200 object-cover h-64" />
-          </div>
-          <div>
-            <h2 id="featured-title" className="text-3xl md:text-4xl font-semibold tracking-tight">{project.title}</h2>
-            <p className="text-base-content/80 leading-7 mt-4">{project.description}</p>
-            <div className="text-base-content/70 mt-4">{project.tech.join(' · ')}</div>
-            <div className="mt-6">
-              <Link to={`/projects/${project.id}`} className="btn btn-primary">View Details</Link>
+        <div className="text-center mb-12">
+          <span className="badge badge-primary badge-outline mb-4">Featured Project</span>
+          <h2 id="featured-title" className="text-3xl md:text-4xl font-semibold tracking-tight">{project.title}</h2>
+        </div>
+        <div className="card bg-base-200 border border-base-300 rounded-2xl overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+            <div className="bg-base-300/40">
+              <img
+                src={project.image || placeholder}
+                alt={`${project.title} screenshot`}
+                className="w-full h-full object-cover min-h-64"
+              />
+            </div>
+            <div className="p-8 flex flex-col justify-center gap-5">
+              <p className="text-base-content/80 leading-7">{project.description}</p>
+              <div className="flex flex-wrap gap-2">
+                {project.tech.map((t) => (
+                  <span key={t} className="badge badge-outline text-base-content/70">{t}</span>
+                ))}
+              </div>
+              <div>
+                <Link to={`/projects/${project.id}`} className="btn btn-primary">View Details</Link>
+              </div>
             </div>
           </div>
         </div>
