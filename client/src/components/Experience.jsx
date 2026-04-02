@@ -67,8 +67,8 @@ export default function Experience() {
               <p className="text-base-content/80 leading-7 text-sm">{job.description}</p>
               <ul className="mt-3 space-y-1">
                 {job.highlights.map((h, i) => (
-                  <li key={i} className="text-base-content/75 text-sm flex gap-2">
-                    <span className="text-primary mt-1">›</span>
+                  <li key={i} className="text-base-content/75 text-sm flex items-center gap-2">
+                    <span className="text-primary">›</span>
                     {h}
                   </li>
                 ))}
