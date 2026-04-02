@@ -1,39 +1,39 @@
 import React from 'react'
-import headshot from '../../assets/images/hero/headshot.jpg'
+import headshot from '../../assets/images/hero/headshot.webp'
 
 export default function Hero() {
   return (
-    <section id="home" className="py-20">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-items-center md:justify-items-stretch">
+    <section id="home" className="py-20 md:py-32">
+      <div className="max-w-3xl mx-auto px-6 text-center">
 
-          {/* Left: intro card */}
-          <div className="flex justify-center md:justify-start">
-            <div className="card card-compact w-full max-w-[720px] bg-base-200 border border-base-300 p-8 shadow-sm mx-auto md:mx-0">
-              <div className="space-y-6 text-center md:text-left">
-                <h1 className="text-4xl md:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-600">
-                  Nathan Shutter
-                </h1>
-                <p className="text-base-content/80 leading-7 text-lg md:text-xl">Technical Support Specialist | IT Professional</p>
-                <p className="text-base-content/70 leading-7 max-w-prose mx-auto md:mx-0">Delivering end-to-end IT solutions with expertise in troubleshooting, system optimization, and client support.</p>
-                <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                  <a href="#projects" className="btn btn-primary">View Projects</a>
-                  <a href="/resume.pdf" download className="btn btn-outline">Download Resume</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right: headshot framed */}
-          <div className="flex items-center justify-center">
-            <div className="relative w-full max-w-md">
-              <img src={headshot} alt="Nathan Shutter" className="w-full h-72 md:h-80 object-cover rounded-2xl border border-base-300 shadow-lg" />
-              {/* subtle frame */}
-              <div className="absolute -inset-px rounded-2xl border border-base-200 pointer-events-none" />
-            </div>
-          </div>
-
+        {/* Avatar */}
+        <div className="flex justify-center mb-8">
+          <img
+            src={headshot}
+            alt="Nathan Shutter"
+            className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full object-cover object-top border-4 border-base-300 shadow-md"
+          />
         </div>
+
+        {/* Name */}
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-primary to-accent mb-4">
+          Nathan Shutter
+        </h1>
+
+        {/* Role + description */}
+        <p className="text-lg font-medium text-base-content/80 mb-3">
+          Technical Support Specialist · IT Professional
+        </p>
+        <p className="text-base-content/60 leading-7 max-w-xl mx-auto mb-10">
+          Delivering end-to-end IT solutions — from infrastructure and automation to hands-on client support.
+        </p>
+
+        {/* CTAs */}
+        <div className="flex flex-wrap gap-4 justify-center">
+          <a href="#projects" className="btn btn-primary">View Projects</a>
+          <a href="/resume.pdf" download className="btn btn-outline">Download Resume</a>
+        </div>
+
       </div>
     </section>
   )
