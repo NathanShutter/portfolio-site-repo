@@ -91,9 +91,20 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  background-image: radial-gradient(oklch(0% 0 0 / 0.045) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+[data-theme="dark"] body {
+  background-image: radial-gradient(oklch(100% 0 0 / 0.04) 1px, transparent 1px);
+}
+
+.mono {
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  letter-spacing: 0.04em;
 }
 
 /* ----------------------
@@ -121,4 +132,38 @@ body {
     animation: none;
     transform: none;
   }
+}
+
+/* ----------------------
+   Animation: fade up (Hero entry)
+   ---------------------- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up   { animation: fadeUp 0.55s ease-out both; }
+.fade-up-1 { animation-delay: 0.08s; }
+.fade-up-2 { animation-delay: 0.18s; }
+.fade-up-3 { animation-delay: 0.28s; }
+.fade-up-4 { animation-delay: 0.38s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up { animation: none; }
+}
+
+/* ----------------------
+   Animation: terminal cursor blink
+   ---------------------- */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1.1s step-end infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-blink { animation: none; }
 }

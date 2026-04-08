@@ -68,7 +68,7 @@ export default function ProjectPage() {
                 </a>
               )}
               {project.repo && (
-                <a className="btn btn-outline" href={project.repo} target="_blank" rel="noopener noreferrer">
+                <a className="btn btn-primary" href={project.repo} target="_blank" rel="noopener noreferrer">
                   View Repo
                 </a>
               )}

@@ -11,7 +11,7 @@ export default function FeaturedProject() {
     <section className="py-16 md:py-24" aria-labelledby="featured-title">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Spotlight</p>
+          <p className="mono text-xs text-primary mb-3">// Spotlight</p>
           <h2 id="featured-title" className="text-3xl md:text-4xl font-semibold tracking-tight">{project.title}</h2>
         </div>
         <div className="card bg-base-200 border border-base-300 rounded-2xl overflow-hidden">

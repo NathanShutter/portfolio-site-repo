@@ -7,7 +7,7 @@ export default function Projects() {
     <section id="projects" className="py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">My Work</p>
+          <p className="mono text-xs text-primary mb-3">// My Work</p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Projects</h2>
           <p className="text-base-content/75 leading-7 max-w-2xl mx-auto mt-4">
             A selection of things I've built — spanning hardware integration, web apps, and automation.

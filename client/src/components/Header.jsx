@@ -23,12 +23,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-base-100/90 backdrop-blur-md border-b border-base-300">
       <div className="navbar max-w-6xl mx-auto px-6">
 
-        {/* Logo */}
-        <div className="navbar-start">
-          <a href="#home" className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-b from-primary to-accent">
-            Nathan Shutter
-          </a>
-        </div>
+        <div className="navbar-start" />
 
         {/* Desktop nav */}
         <div className="navbar-center hidden md:flex">

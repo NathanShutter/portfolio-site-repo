@@ -50,25 +50,24 @@ export default function Experience() {
     <section id="experience" className="py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Background</p>
+          <p className="mono text-xs text-primary mb-3">// Background</p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Experience</h2>
         </div>
         <div className="space-y-5 max-w-3xl mx-auto">
           {jobs.map((job) => (
-            <div key={job.id} className="card bg-base-200 border border-base-300 p-6 rounded-2xl">
+            <div key={job.id} className="bg-base-200 border border-base-300 border-l-2 border-l-primary rounded-2xl p-6">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-4">
                 <div className="flex flex-col">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-primary mb-1 sm:hidden">{job.period}</span>
                   <h3 className="text-lg font-semibold text-base-content">{job.title}</h3>
                   <p className="text-base-content/75 text-sm mt-0.5">{job.company} · {job.location}</p>
                 </div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-primary whitespace-nowrap hidden sm:block">{job.period}</span>
+                <span className="mono text-xs text-primary whitespace-nowrap mt-0.5">{job.period}</span>
               </div>
               <p className="text-base-content/80 leading-7 text-sm">{job.description}</p>
               <ul className="mt-3 space-y-1">
                 {job.highlights.map((h, i) => (
-                  <li key={i} className="text-base-content/75 text-sm flex items-center gap-2">
-                    <span className="text-primary">›</span>
+                  <li key={i} className="text-base-content/75 text-sm flex items-start gap-2">
+                    <span className="text-primary mt-0.5 shrink-0">›</span>
                     {h}
                   </li>
                 ))}
