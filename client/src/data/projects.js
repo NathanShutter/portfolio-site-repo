@@ -1,5 +1,15 @@
 const projects = [
   {
+    id: 3,
+    title: 'Enterprise Infrastructure Lab',
+    description: 'A fully reproducible small-enterprise Active Directory and network lab environment, with automation via Terraform and PowerShell.',
+    longDescription: 'Simulates a real-world enterprise network including Active Directory, DNS, and core networking services. Designed to be fully reproducible from scratch, with VM provisioning and configuration automated using Terraform and PowerShell. Tracks ongoing work across 9 open issues covering additional infrastructure components and hardening tasks.',
+    tech: ['Active Directory', 'Terraform', 'PowerShell', 'Windows Server', 'Networking'],
+    link: '',
+    repo: 'https://github.com/NathanShutter/enterprise-infrastructure-lab',
+    image: '/images/projects/wip.png'
+  },
+  {
     id: 1,
     title: 'Touch-And-Go',
     description: 'University Fingerprint Scanner Attendance System. Developed a college attendance system using a fingerprint scanner, Raspberry Pi, and LCD screen, hosted on AWS EC2 with a MySQL database for managing user and course information.',
