@@ -45,7 +45,7 @@ export default function Hero() {
         {/* CTAs */}
         <div className="flex flex-wrap gap-4 justify-center mb-8 fade-up fade-up-4">
           <a href="#projects" className="btn btn-primary">View Projects</a>
-          <a href="/resume.pdf" download className="btn btn-outline">Download Resume</a>
+          <a href="/Nathan_Shutter_Resume_05-2026.pdf" download className="btn btn-outline">Download Resume</a>
         </div>
 
         {/* Social links */}
