@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigationType } from 'react-router-dom'
 import headshot from '../../assets/images/hero/headshot.webp'
 
 const GitHubIcon = () => (
@@ -14,12 +15,15 @@ const LinkedInIcon = () => (
 )
 
 export default function Hero() {
+  const navType = useNavigationType()
+  const animate = navType !== 'POP'
+
   return (
     <section id="home" className="py-20 md:py-32">
       <div className="max-w-3xl mx-auto px-6 text-center">
 
         {/* Photo */}
-        <div className="flex justify-center mb-8 fade-up">
+        <div className={`flex justify-center mb-8 ${animate ? 'fade-up' : ''}`}>
           <img
             src={headshot}
             alt="Nathan Shutter"
@@ -28,28 +32,28 @@ export default function Hero() {
         </div>
 
         {/* Name */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-primary mb-4 fade-up fade-up-1">
+        <h1 className={`text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-primary mb-4 ${animate ? 'fade-up fade-up-1' : ''}`}>
           Nathan Shutter
         </h1>
 
         {/* Role */}
-        <p className="mono text-sm text-base-content/60 mb-6 fade-up fade-up-2">
+        <p className={`mono text-sm text-base-content/60 mb-6 ${animate ? 'fade-up fade-up-2' : ''}`}>
           Technical Support Specialist · IT Professional
         </p>
 
         {/* Description */}
-        <p className="text-base-content/60 leading-7 max-w-xl mx-auto mb-10 fade-up fade-up-3">
+        <p className={`text-base-content/60 leading-7 max-w-xl mx-auto mb-10 ${animate ? 'fade-up fade-up-3' : ''}`}>
           Delivering end-to-end IT solutions — from infrastructure and automation to hands-on client support.
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-wrap gap-4 justify-center mb-8 fade-up fade-up-4">
+        <div className={`flex flex-wrap gap-4 justify-center mb-8 ${animate ? 'fade-up fade-up-4' : ''}`}>
           <a href="#projects" className="btn btn-primary">View Projects</a>
           <a href="/Nathan_Shutter_Resume_05-2026.pdf" download className="btn btn-outline">Download Resume</a>
         </div>
 
         {/* Social links */}
-        <div className="flex gap-5 justify-center fade-up fade-up-4">
+        <div className={`flex gap-5 justify-center ${animate ? 'fade-up fade-up-4' : ''}`}>
           <a
             href="https://github.com/NathanShutter"
             target="_blank"
