@@ -30,7 +30,7 @@ const projects = [
     longDescription: 'Integrated sensors with a web application to monitor patient seating behavior. Implemented notifications for caregivers and a data dashboard for trends and alerts; documentation and handoff materials were provided to the partner health network.',
     tech: ['Web App', 'Sensor Integration', 'Healthcare Tech', 'Data Management'],
     link: '',
-    repo: '',
+    repo: 'https://github.com/NathanShutter/SeatSense',
     image: '/images/projects/SeatSense.png'
   }
 ]
