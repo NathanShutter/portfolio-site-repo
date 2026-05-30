@@ -4,7 +4,7 @@ export default function Experience() {
   const jobs = [
     {
       id: 1,
-      title: 'Technical Support Specialist I',
+      title: 'Technical Support Specialist',
       company: 'PointSolve Technology, Inc.',
       location: 'Lebanon, PA',
       period: 'DEC 2024 – PRESENT',
