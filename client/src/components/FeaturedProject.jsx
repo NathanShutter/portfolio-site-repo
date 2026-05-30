@@ -31,7 +31,7 @@ export default function FeaturedProject() {
                 ))}
               </div>
               <div>
-                <Link to={`/projects/${project.id}`} className="btn btn-primary">View Details</Link>
+                <Link to={`/projects/${project.slug}`} className="btn btn-primary">View Details</Link>
               </div>
             </div>
           </div>

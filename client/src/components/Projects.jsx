@@ -16,7 +16,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <div key={project.id} className="group card bg-base-200 border border-base-300 rounded-2xl overflow-hidden hover:border-primary transition-colors duration-200">
-              <img src={project.image || placeholder} alt={`${project.title} thumbnail`} className="w-full h-44 object-cover" />
+              <img src={project.cardImage || project.image || placeholder} alt={`${project.title} thumbnail`} className="w-full h-44 object-cover" />
               <div className="p-6 space-y-3">
                 <h3 className="text-lg font-semibold text-base-content group-hover:text-primary transition-colors duration-200">{project.title}</h3>
                 <p className="text-base-content/75 leading-6 text-sm">{project.description}</p>
@@ -25,7 +25,7 @@ export default function Projects() {
                     <span key={t} className="badge badge-outline text-base-content/70 text-xs">{t}</span>
                   ))}
                 </div>
-                <Link to={`/projects/${project.id}`} className="inline-flex items-center gap-1 text-sm font-medium text-primary mt-2 hover:gap-2 transition-all duration-150">
+                <Link to={`/projects/${project.slug}`} className="inline-flex items-center gap-1 text-sm font-medium text-primary mt-2 hover:gap-2 transition-all duration-150">
                   View Project <span aria-hidden>→</span>
                 </Link>
               </div>

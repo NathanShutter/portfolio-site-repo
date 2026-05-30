@@ -1,16 +1,17 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import projects from '../data/projects'
 
 export default function ProjectPage() {
-  const { id } = useParams()
-  const project = projects.find(p => String(p.id) === String(id))
+  const { slug } = useParams()
+  const navigate = useNavigate()
+  const project = projects.find(p => p.slug === slug)
 
   if (!project) {
     return (
       <div className="min-h-screen bg-base-100 flex items-center justify-center">
         <div className="text-center space-y-4">
           <h2 className="text-2xl font-semibold text-base-content">Project not found</h2>
-          <Link to="/" className="btn btn-primary">Back to home</Link>
+          <button onClick={() => navigate(-1)} className="btn btn-primary">Back to home</button>
         </div>
       </div>
     )
@@ -21,7 +22,7 @@ export default function ProjectPage() {
       {/* Top bar */}
       <div className="sticky top-0 z-50 bg-base-100/90 backdrop-blur-md border-b border-base-300">
         <div className="max-w-6xl mx-auto px-6 py-3">
-          <Link to="/" className="btn btn-ghost btn-sm">← Back</Link>
+          <button onClick={() => navigate(-1)} className="btn btn-ghost btn-sm">← Back</button>
         </div>
       </div>
 
