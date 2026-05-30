@@ -29,9 +29,9 @@ const projects = [
     description: "Patient Seating Monitor Sensor & Web App developed in collaboration with Saint Luke's Health Network. Notifies caregivers of missed check-ins or excessive sitting time, with data accessible through a web application.",
     longDescription: 'Integrated sensors with a web application to monitor patient seating behavior. Implemented notifications for caregivers and a data dashboard for trends and alerts; documentation and handoff materials were provided to the partner health network.',
     tech: ['Web App', 'Sensor Integration', 'Healthcare Tech', 'Data Management'],
-    link: 'https://example.com/seatsense',
+    link: '',
     repo: '',
-    image: '/images/projects/wip.png'
+    image: '/images/projects/SeatSense.png'
   }
 ]
 
