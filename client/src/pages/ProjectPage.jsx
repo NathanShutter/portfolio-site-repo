@@ -4,6 +4,14 @@ import projects from '../data/projects'
 export default function ProjectPage() {
   const { slug } = useParams()
   const navigate = useNavigate()
+
+  const handleBack = () => {
+    document.documentElement.style.scrollBehavior = 'auto'
+    navigate(-1)
+    requestAnimationFrame(() => {
+      document.documentElement.style.scrollBehavior = ''
+    })
+  }
   const project = projects.find(p => p.slug === slug)
 
   if (!project) {
@@ -11,7 +19,7 @@ export default function ProjectPage() {
       <div className="min-h-screen bg-base-100 flex items-center justify-center">
         <div className="text-center space-y-4">
           <h2 className="text-2xl font-semibold text-base-content">Project not found</h2>
-          <button onClick={() => navigate(-1)} className="btn btn-primary">Back to home</button>
+          <button onClick={handleBack} className="btn btn-primary">Back to home</button>
         </div>
       </div>
     )
@@ -22,7 +30,7 @@ export default function ProjectPage() {
       {/* Top bar */}
       <div className="sticky top-0 z-50 bg-base-100/90 backdrop-blur-md border-b border-base-300">
         <div className="max-w-6xl mx-auto px-6 py-3">
-          <button onClick={() => navigate(-1)} className="btn btn-ghost btn-sm">← Back</button>
+          <button onClick={handleBack} className="btn btn-ghost btn-sm">← Back</button>
         </div>
       </div>
 
