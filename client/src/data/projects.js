@@ -8,7 +8,7 @@ const projects = [
     tech: ['Active Directory', 'Terraform', 'PowerShell', 'Windows Server', 'Networking'],
     link: '',
     repo: 'https://github.com/NathanShutter/enterprise-infrastructure-lab',
-    image: '/images/projects/wip.png'
+    image: '/images/projects/enterprise-server-manager.png'
   },
   {
     id: 1,
